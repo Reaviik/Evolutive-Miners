@@ -1,5 +1,7 @@
-package com.example.evolutiveminers;
+package com.ctr.evolutiveminers;
 
+import com.ctr.evolutiveminers.blocks.ModBlocks;
+import com.ctr.evolutiveminers.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,11 +18,17 @@ import org.slf4j.Logger;
 public class EvolutiveMiners
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "Evolutive Miners";
+    public static final String MOD_ID = "evolutiveminers";
     private static final Logger LOGGER = LogUtils.getLogger();
     public EvolutiveMiners()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //Registro de Items
+        ModItems.register(modEventBus);
+
+        //Registro de Blocos
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
