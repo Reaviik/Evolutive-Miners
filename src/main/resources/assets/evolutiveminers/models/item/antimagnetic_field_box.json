@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "evolutiveminers:item/antimagnetic_field_box"
+  }
+}

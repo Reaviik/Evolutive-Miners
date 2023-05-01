@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> STABILIZER = ITEMS.register("stabilizer",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
+    public static final RegistryObject<Item> ANTIMAGNETIC_FIELD_BOX = ITEMS.register("antimagnetic_field_box",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
