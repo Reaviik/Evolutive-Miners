@@ -1,6 +1,7 @@
 package com.ctr.evolutiveminers.blocks;
 
 import com.ctr.evolutiveminers.EvolutiveMiners;
+import com.ctr.evolutiveminers.blocks.custom.BlackHole;
 import com.ctr.evolutiveminers.items.ModItems;
 import com.ctr.evolutiveminers.tab.ModCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
@@ -19,11 +20,12 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, EvolutiveMiners.MOD_ID);
-
+    //Normal Blocks
+    //Custon Blocks
+    //Miner Blocks
     public static final RegistryObject<Block> BLACK_HOLE = registerBlock("black_hole",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new BlackHole(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.EVOLUTIVE_MINERS);
-
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

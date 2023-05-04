@@ -1,8 +1,12 @@
 package com.ctr.evolutiveminers;
 
 import com.ctr.evolutiveminers.blocks.ModBlocks;
+import com.ctr.evolutiveminers.blocks.entity.ModBlockEntities;
 import com.ctr.evolutiveminers.items.ModItems;
+import com.ctr.evolutiveminers.screem.BlackHoleScreen;
+import com.ctr.evolutiveminers.screem.ModMenuTypes;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +34,10 @@ public class EvolutiveMiners
         //Registro de Blocos
         ModBlocks.register(modEventBus);
 
+        //Registro de Block Entities
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -45,6 +53,7 @@ public class EvolutiveMiners
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
+            MenuScreens.register(ModMenuTypes.BLACK_HOLE_MENU.get(), BlackHoleScreen::new);
         }
     }
 }

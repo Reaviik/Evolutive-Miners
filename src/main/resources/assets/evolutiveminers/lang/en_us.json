@@ -1,9 +1,15 @@
 {
   "item.evolutiveminers.stabilizer":"Stabilizer",
   "item.evolutiveminers.antimagnetic_field_box":"Antimagnetic Field Box",
+  "item.evolutiveminers.speed_upgrade":"Speed Upgrade",
 
   "block.evolutiveminers.black_hole":"Black Hole",
 
+  "Comment": "Tooltips",
+
+  "tooltip.evolutiveminers.presShift": "§eHold §6Shift §efor more info",
+  "tooltip.evolutiveminers.antimagnetic_field_box": "§bUsed for catcher black holes around",
+  "tooltip.evolutiveminers.speed_upgrade": "§bUpgrade ours Black Hole miners in §650%",
 
   "itemGroup.evolutiveminers":"Evolutive Miners",
 

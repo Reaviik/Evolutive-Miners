@@ -1,6 +1,7 @@
 package com.ctr.evolutiveminers.items;
 
 import com.ctr.evolutiveminers.EvolutiveMiners;
+import com.ctr.evolutiveminers.items.custom.AntimagneticFieldBox;
 import com.ctr.evolutiveminers.tab.ModCreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,7 +16,9 @@ public class ModItems {
     public static final RegistryObject<Item> STABILIZER = ITEMS.register("stabilizer",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
     public static final RegistryObject<Item> ANTIMAGNETIC_FIELD_BOX = ITEMS.register("antimagnetic_field_box",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
+            () -> new AntimagneticFieldBox(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
+    public static final RegistryObject<Item> SPEED_UPGRADE = ITEMS.register("speed_upgrade",
+            () -> new SpeedUpgrade(new Item.Properties().tab(ModCreativeModeTab.EVOLUTIVE_MINERS)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
